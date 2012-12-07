@@ -50,4 +50,25 @@ we can calculate the size of matrix supported:
 
 By using the second representation we can reduce the size for 8x8 from 64 to 24 bits.
 
+##Rubik's Cube
+
+In calculator notion, using one number per row becomes a simple list of numbers.
+Rubik's cube got 20 movable cubes.
+
+    [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] e   identity   0:19
+    [6,7,0,1,2,3,4,5,8,9,10,11,12,13,14,15,16,17,18,19]	y1  yellow clock-wise
+    [2,9,14,3,4,5,6,7,1,13,10,11,0,8,12,15,16,17,18,19]	r1  red clock-wise
+    [0,1,4,10,16,5,6,7,8,3,15,11,12,13,2,9,14,17,18,19]	b1  blue clock-wise
+    [0,1,2,3,4,5,6,7,8,9,10,11,18,19,12,13,14,15,16,17]	w-1 white counter-clock-wise
+    [0,1,2,3,16,10,4,7,8,9,17,5,12,13,14,15,18,11,6,19]	o-1 orange counter-clock-wise
+    [6,1,2,3,4,5,18,11,7,9,10,19,0,13,14,15,16,17,12,8]	g-1 green counter-clock-wise
+
+If you rotate Rubik's cube clock-wise around yellow and then clock-wise blue, we can write the following:
+
+    x=y1
+    y=b1
+    y\\x
+    
+The '\\' operation is an index lookup.
+It is important to start the indices at 0 to get the same indices out.
 
